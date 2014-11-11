@@ -24,6 +24,11 @@
   <ItemGroup>
     <ClInclude Include="ZipFile.h" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\assimp\workspaces\vc12\assimp.vcxproj">
+      <Project>{5691e159-2d9b-407f-971f-ea5c592dc524}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{40500E91-694F-490E-8894-1FD74E70FB0E}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
