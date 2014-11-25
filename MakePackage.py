@@ -13,9 +13,13 @@ from contextlib import closing
 from zipfile import ZipFile, ZIP_DEFLATED
 import os
 
-def ZipDirectory(baseDirectory, archiveName, filesToIgnore):
+def ZipDirectory(baseDirectory, archiveName, filesToIgnore, otherZipFiles):
     assert os.path.isdir(baseDirectory)
-    with closing(ZipFile(archiveName, "w", ZIP_DEFLATED)) as z:
+    with closing(ZipFile(archiveName, "w", ZIP_DEFLATED)) as out:
+        for otherZipFileName in otherZipFiles:
+            with closing(ZipFile(otherZipFileName, "r")) as other:
+                for objectInOtherZipFile in other.infolist():
+                    out.writestr(objectInOtherZipFile, other.read(objectInOtherZipFile))
         for root, dirs, files in os.walk(baseDirectory):
             # NOTE: ignore empty directories
             for fileName in files:
@@ -23,15 +27,16 @@ def ZipDirectory(baseDirectory, archiveName, filesToIgnore):
                     continue
                 filePath = os.path.join(root, fileName)
                 zipFilePath = filePath[len(baseDirectory)+len(os.sep):] #XXX: relative path
-                z.write(filePath, zipFilePath)
+                out.write(filePath, zipFilePath)
 
 if __name__ == "__main__":
     import sys
-    baseDirectory = sys.argv[2]
     archiveName = sys.argv[1]
+    baseDirectory = sys.argv[2]
+    otherZipFiles = sys.argv[3:]
     filesToIgnore = set(
         [
             "Thumbs.db",
         ]
     )
-    ZipDirectory(baseDirectory, archiveName, filesToIgnore)
+    ZipDirectory(baseDirectory, archiveName, filesToIgnore, otherZipFiles)
