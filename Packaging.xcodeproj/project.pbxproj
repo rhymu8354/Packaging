@@ -82,7 +82,7 @@
 		BB8470C51A0AE459000B45D6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Richard Walters";
 			};
 			buildConfigurationList = BB8470C81A0AE459000B45D6 /* Build configuration list for PBXProject "Packaging" */;
@@ -201,6 +201,7 @@
 		BB8470D21A0AE459000B45D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				EXECUTABLE_PREFIX = lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -209,6 +210,7 @@
 		BB8470D31A0AE459000B45D6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				EXECUTABLE_PREFIX = lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
