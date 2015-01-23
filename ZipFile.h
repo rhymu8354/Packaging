@@ -28,11 +28,6 @@ namespace Packaging {
         // Public Methods
     public:
         /**
-         * This is the object constructor.
-         */
-        ZipFile();
-
-        /**
          * This is the object destructor.
          */
         ~ZipFile();
@@ -60,16 +55,17 @@ namespace Packaging {
 
         // Files::IFileCollection
     public:
-        virtual uint64_t Size(const std::string& fileName);
-        virtual bool Read(const std::string& fileName, std::vector< uint8_t >& fileContents);
-        virtual bool Read(const std::string& fileName, void* fileContents, size_t maxFileContents);
+        virtual uint64_t Size(const std::string& fileName) override;
+        virtual bool Read(const std::string& fileName, std::vector< uint8_t >& fileContents) override;
+        virtual bool Read(const std::string& fileName, void* fileContents, size_t maxFileContents) override;
+        virtual void ListDirectory(const std::string& directory, std::vector< std::string >& list) override;
 
         // Private Properties
     private:
         /**
          * This is the handle of the currently open ZIP file.
          */
-        unzFile _zipFile;
+        unzFile _zipFile = nullptr;
     };
 
 }
