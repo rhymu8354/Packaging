@@ -13,6 +13,7 @@
  */
 
 #include <Files/IFileCollection.h>
+#include <mutex>
 #include <stdint.h>
 #include <string>
 #include <unzip.h>
@@ -66,6 +67,12 @@ namespace Packaging {
          * This is the handle of the currently open ZIP file.
          */
         unzFile _zipFile = nullptr;
+
+        /**
+         * This is used to make sure all accesses to the ZIP file
+         * are made thread-safe.
+         */
+        std::mutex _zipFileLock;
     };
 
 }

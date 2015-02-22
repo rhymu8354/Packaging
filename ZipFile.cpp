@@ -33,6 +33,7 @@ namespace Packaging {
     }
 
     uint64_t ZipFile::Size(const std::string& fileName) {
+        std::unique_lock< std::mutex > locker(_zipFileLock);
         if (_zipFile == nullptr) {
             return 0;
         }
@@ -49,6 +50,7 @@ namespace Packaging {
     }
 
     bool ZipFile::Read(const std::string& fileName, std::vector< uint8_t >& fileContents) {
+        std::unique_lock< std::mutex > locker(_zipFileLock);
         fileContents.clear();
         if (_zipFile == nullptr) {
             return false;
@@ -78,6 +80,7 @@ namespace Packaging {
     }
 
     bool ZipFile::Read(const std::string& fileName, void* fileContents, size_t maxFileContents) {
+        std::unique_lock< std::mutex > locker(_zipFileLock);
         if (_zipFile == nullptr) {
             return false;
         }
@@ -106,6 +109,7 @@ namespace Packaging {
     }
 
     void ZipFile::ListDirectory(const std::string& directory, std::vector< std::string >& list) {
+        std::unique_lock< std::mutex > locker(_zipFileLock);
         list.clear();
         if (_zipFile == nullptr) {
             return;
