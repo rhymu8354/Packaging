@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		BB8470D61A0B4793000B45D6 /* ZipFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BB8470D41A0B4793000B45D6 /* ZipFile.cpp */; };
-		BB8470D71A0B4793000B45D6 /* ZipFile.h in Headers */ = {isa = PBXBuildFile; fileRef = BB8470D51A0B4793000B45D6 /* ZipFile.h */; };
+		BB8470D71A0B4793000B45D6 /* ZipFile.hpp in Headers */ = {isa = PBXBuildFile; fileRef = BB8470D51A0B4793000B45D6 /* ZipFile.hpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BB8470CD1A0AE459000B45D6 /* libPackaging.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPackaging.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB8470D41A0B4793000B45D6 /* ZipFile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZipFile.cpp; sourceTree = "<group>"; };
-		BB8470D51A0B4793000B45D6 /* ZipFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipFile.h; sourceTree = "<group>"; };
+		BB8470D51A0B4793000B45D6 /* ZipFile.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipFile.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,7 +32,7 @@
 			isa = PBXGroup;
 			children = (
 				BB8470D41A0B4793000B45D6 /* ZipFile.cpp */,
-				BB8470D51A0B4793000B45D6 /* ZipFile.h */,
+				BB8470D51A0B4793000B45D6 /* ZipFile.hpp */,
 				BB8470CE1A0AE459000B45D6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,7 +52,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB8470D71A0B4793000B45D6 /* ZipFile.h in Headers */,
+				BB8470D71A0B4793000B45D6 /* ZipFile.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
