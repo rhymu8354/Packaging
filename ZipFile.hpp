@@ -1,18 +1,15 @@
-#ifndef PACKAGING_ZIP_FILE_H
-#define PACKAGING_ZIP_FILE_H
-#ifndef __cplusplus
-#error This is a C++ only header file
-#endif
+#ifndef PACKAGING_ZIP_FILE_HPP
+#define PACKAGING_ZIP_FILE_HPP
 
 /**
- * @file ZipFile.h
+ * @file ZipFile.hpp
  *
  * This module declares the Packaging::ZipFile class.
  *
- * Copyright (c) 2013-2014 by Richard Walters
+ * Copyright (c) 2013-2016 by Richard Walters
  */
 
-#include <Files/IFileCollection.h>
+#include <Files/IFileCollection.hpp>
 #include <mutex>
 #include <stdint.h>
 #include <string>
@@ -77,4 +74,4 @@ namespace Packaging {
 
 }
 
-#endif /* PACKAGING_ZIP_FILE_H */
+#endif /* PACKAGING_ZIP_FILE_HPP */

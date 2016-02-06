@@ -3,10 +3,10 @@
  *
  * This module contains the implementation of the Packaging::ZipFile class.
  *
- * Copyright (c) 2013-2014 by Richard Walters
+ * Copyright (c) 2013-2016 by Richard Walters
  */
 
-#include "ZipFile.h"
+#include "ZipFile.hpp"
 
 #include <algorithm>
 #include <stdint.h>

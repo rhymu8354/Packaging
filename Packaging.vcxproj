@@ -22,7 +22,7 @@
     <ClCompile Include="ZipFile.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ZipFile.h" />
+    <ClInclude Include="ZipFile.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\assimp\workspaces\vc12\assimp.vcxproj">
