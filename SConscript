@@ -25,6 +25,7 @@ interface = [
 # in the workspace, list their product trees here.
 deps = [
     products["assimp"],
+    products["Files"],
 ]
 
 # List all supported platforms here.
