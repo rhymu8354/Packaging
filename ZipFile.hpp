@@ -9,7 +9,7 @@
  * Copyright (c) 2013-2016 by Richard Walters
  */
 
-#include <Files/IFileCollection.hpp>
+#include <SystemAbstractions/IFileCollection.hpp>
 #include <mutex>
 #include <stdint.h>
 #include <string>
@@ -22,7 +22,7 @@ namespace Packaging {
      * This class manages a single ZIP file and provides methods for
      * retrieving the contents of any file contained within it.
      */
-    class ZipFile : public Files::IFileCollection {
+    class ZipFile : public SystemAbstractions::IFileCollection {
         // Public Methods
     public:
         /**
@@ -51,7 +51,7 @@ namespace Packaging {
          */
         void Close();
 
-        // Files::IFileCollection
+        // SystemAbstractions::IFileCollection
     public:
         virtual uint64_t Size(const std::string& fileName) override;
         virtual bool Read(const std::string& fileName, std::vector< uint8_t >& fileContents) override;
