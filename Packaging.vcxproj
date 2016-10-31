@@ -25,8 +25,8 @@
     <ClInclude Include="ZipFile.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\assimp\workspaces\vc12\assimp.vcxproj">
-      <Project>{5691e159-2d9b-407f-971f-ea5c592dc524}</Project>
+    <ProjectReference Include="$(ZlibDir)contrib\vstudio\vc14\zlibstat.vcxproj">
+      <Project>{745dec58-ebb3-47a9-a9b8-4c6627c01bf8}</Project>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup Label="Globals">
