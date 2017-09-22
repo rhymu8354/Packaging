@@ -48,5 +48,6 @@ target_link_libraries(${This}
     minizip
     SystemAbstractions
 )
+set_target_properties(${This} PROPERTIES FOLDER Libraries)
 
 set(PACKAGING_SCRIPT ${CMAKE_CURRENT_SOURCE_DIR}/MakePackage.py PARENT_SCOPE)
