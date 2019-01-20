@@ -3,12 +3,11 @@
  *
  * This module contains the implementation of the Packaging::ZipFile class.
  *
- * Copyright (c) 2013-2016 by Richard Walters
+ * Copyright (c) 2013-2016, 2019 by Richard Walters
  */
 
-#include "ZipFile.hpp"
-
 #include <algorithm>
+#include <Packaging/ZipFile.hpp>
 #include <stdint.h>
 #include <unzip.h>
 #include <vector>

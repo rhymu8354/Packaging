@@ -6,7 +6,7 @@
 # Adapted from http://stackoverflow.com/questions/296499/how-do-i-zip-the-contents-of-a-folder-using-python-version-2-5
 #
 # Copyright (c) 2008 by J.F. Sebastian
-# Copyright (c) 2013-2014 by Richard Walters
+# Copyright (c) 2013-2014, 2019 by Richard Walters
 #
 from __future__ import with_statement
 from contextlib import closing
